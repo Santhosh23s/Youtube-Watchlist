@@ -20,11 +20,6 @@ const router = createBrowserRouter(
     { path: '/playlists/:id', element: <Playlist /> },
     { path: '/watch/:videoId', element: <Watch /> },
   ],
-  {
-    future: {
-      v7_startTransition: true,
-    },
-  },
 )
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
