@@ -1,0 +1,19 @@
+[build]
+  command = "cd web && npm run build"
+  publish = "web/dist"
+
+  # Optional: cache node modules for faster builds
+  environment = { NODE_ENV = "production" }
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+  force = false
+
+[[redirects]]
+  # Single page app fallback: serve index.html for all non-file requests
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
