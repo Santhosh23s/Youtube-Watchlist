@@ -1,7 +1,12 @@
 {
   "buildCommand": "cd web && npm run build",
   "outputDirectory": "web/dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "^/(?!.*\\.).*$",
+      "dest": "/index.html"
+    }
   ]
 }
