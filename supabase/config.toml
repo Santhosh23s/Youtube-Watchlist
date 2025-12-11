@@ -1,0 +1,7 @@
+project_id = "zxewkingddhlnozavrpx"
+api = { port = 54321 }
+db = { port = 54322, major_version = 15 }
+
+[functions.send-reminders]
+verify_jwt = false
+
